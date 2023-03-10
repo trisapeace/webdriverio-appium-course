@@ -21,7 +21,7 @@ config.port = 4723
 //
 config.specs = [
   // ToDo: define location for spec files here
-  "./../test/specs/android/add-note-with-screenobject.spec.js",
+  "./../test/specs/android/webview.spec.js",
 ]
 
 //
@@ -38,7 +38,8 @@ config.capabilities = [
     'appium:automationName': 'UIAutomator2',
     // 'appium:app': path.join(process.cwd(), 'app/android/ApiDemos-debug.apk') // Could also do the full path if we wanted to
     'appium:app': path.join(process.cwd(), 'app/android/ColorNote-Notepad.apk'), // Could also do the full path if we wanted to
-    'appium:autoGrantPermissions': true // Automatically add for permissions
+    'appium:autoGrantPermissions': true, // Automatically add for permissions
+    'appium:chromedriverExecutable': path.join(process.cwd(), 'chromedrivers/chromedriver_91.0.4472.19') // Download chromedriver from https://chromedriver.storage.googleapis.com/index.html
   }
 ]
 

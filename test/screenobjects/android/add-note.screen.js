@@ -6,4 +6,8 @@ export class AddNoteScreen {
     static get addNoteText() {
         return $('//*[@text="Add note"]')
     }
+
+    static get burgerMenu() {
+        return $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/icon_nav"]')
+    }
 }

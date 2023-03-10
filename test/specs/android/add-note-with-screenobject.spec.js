@@ -3,6 +3,7 @@ import { AddNoteTypePickerScreen } from '../../screenobjects/android/add-note-ty
 import { EditNoteScreen } from '../../screenobjects/android/edit-note.screen.js'
 import { ViewNoteScreen } from '../../screenobjects/android/view-note.screen.js'
 import { DeleteNoteConfirmationScreen } from '../../screenobjects/android/delete-note-confirmation.screen.js'
+import { BurgerMenu } from '../../screenobjects/android/burger-menu.screen.js'
 
 describe('Add notes', () => {
     it('Skip tutorial', async () => {
@@ -60,8 +61,8 @@ describe('Add notes', () => {
         await expect($('//*[@text="Fav Anime List"]')).not.toBeDisplayed()
 
         // Go to trash can
-        await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/icon_nav"]').click()
-        await $('//*[@text="Trash Can"]').click()
+        await AddNoteScreen.burgerMenu.click()
+        await BurgerMenu.trashCan.click()
 
         // Verify that it is in the trashcan
         await expect($('//*[@text="Fav Anime List"]')).toBeDisplayed()
