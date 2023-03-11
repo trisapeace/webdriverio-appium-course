@@ -21,7 +21,7 @@ config.port = 4723
 //
 config.specs = [
   // ToDo: define location for spec files here
-  "./../test/specs/android/webview.spec.js",
+  "./../test/specs/android/add-note-with-screenobject.spec.js",
 ]
 
 //

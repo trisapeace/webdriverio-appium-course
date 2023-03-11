@@ -13,3 +13,7 @@ https://www.udemy.com/course/appium-webdriverio-mobile-automation/
 ## To run the Android tests on Browserstack
 
 `npx wdio config/wdio.android.bs.conf.js`
+
+## To display the Allure results
+
+`npx allure open`
